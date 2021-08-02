@@ -6,13 +6,20 @@ class Cart extends Component {
 		let addedItems = this.props.items.length ? (
 			this.props.items.map((item) => {
 				return (
-					<li className='collection-item avatar' key={item.id}>
-						<div className='item-img'>
-							<img src={item.img} alt={item.img} className='' />
+					<li key={item.productId}>
+						<div>
+							<div
+								style={{
+									backgroundImage: `url(${item.imageUrl})`,
+									height: '50px',
+									width: '50px',
+									backgroundColor: 'red',
+								}}
+							></div>
 						</div>
 
-						<div className='item-desc'>
-							<span className='title'>{item.title}</span>
+						<div>
+							<span>{item.name}</span>
 							<p>{item.desc}</p>
 							<p>
 								<b>Price: {item.price}$</b>
@@ -20,17 +27,15 @@ class Cart extends Component {
 							<p>
 								<b>Quantity: {item.quantity}</b>
 							</p>
-							<div className='add-remove'>
+							<div>
 								<Link to='/cart'>
-									<i className='material-icons'>arrow_drop_up</i>
+									<i>^</i>
 								</Link>
 								<Link to='/cart'>
-									<i className='material-icons'>arrow_drop_down</i>
+									<i>arrow_drop_down</i>
 								</Link>
 							</div>
-							<button className='waves-effect waves-light btn pink remove'>
-								Remove
-							</button>
+							<button>Remove</button>
 						</div>
 					</li>
 				);
@@ -39,10 +44,10 @@ class Cart extends Component {
 			<p>Nothing.</p>
 		);
 		return (
-			<div className='container'>
-				<div className='cart'>
+			<div>
+				<div>
 					<h5>You have ordered:</h5>
-					<ul className='collection'>{addedItems}</ul>
+					<ul>{addedItems}</ul>
 				</div>
 			</div>
 		);
