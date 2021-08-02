@@ -11,7 +11,7 @@ const NavBar = () => (
 			<Logo className='logo' />
 		</Link>
 		<div className='options'>
-			<Link className='option' to='/home'>
+			<Link className='option' to='/'>
 				HOME
 			</Link>
 			<Link className='option' to='/myfav'>
