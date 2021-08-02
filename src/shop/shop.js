@@ -1,6 +1,6 @@
-export default SHOP_DATA = [
+const SHOP_DATA = [
 	{
-		name: 'EUROLINE 810 POP UP 700 W Pop Up Toaster  (White)',
+		name: 'EUROLINE 810 ',
 		productId: 'EURO19938201',
 		brandName: 'EUROLINE',
 		category: 'Pop Up Toasters',
@@ -14,7 +14,7 @@ export default SHOP_DATA = [
 		isNewProduct: true,
 	},
 	{
-		name: 'Morphy Richards 25 L Convection Microwave Oven  (MWO 25CG, Steel)',
+		name: 'Morphy Richards ',
 		productId: 'EURO19938202',
 		brandName: 'Morphy',
 		category: 'Microwave Ovens',
@@ -88,3 +88,5 @@ export default SHOP_DATA = [
 		price: 135,
 	},
 ];
+
+export default SHOP_DATA;
