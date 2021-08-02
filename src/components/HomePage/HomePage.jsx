@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import './HomePage.scss';
+import { connect } from 'react-redux';
 
-import PRODUCT_DATA from '../../productList/product_lists.js';
+import './HomePage.scss';
 
 class HomePage extends Component {
 	render() {
 		return (
 			<div className='homepage'>
-				{PRODUCT_DATA.map((item) => (
+				{this.props.items.map((item) => (
 					<div className='menu-item'>
 						<div
 							className='image'
@@ -18,6 +18,7 @@ class HomePage extends Component {
 						<div className='collection-footer'>
 							<span className='name'>{item.name}</span>
 							<span className='price'>$ {item.price}</span>
+							<span>Add to cart</span>
 						</div>
 					</div>
 				))}
@@ -26,4 +27,10 @@ class HomePage extends Component {
 	}
 }
 
-export default HomePage;
+const mapStateToProps = (state) => {
+	return {
+		items: state.items,
+	};
+};
+
+export default connect(mapStateToProps)(HomePage);
