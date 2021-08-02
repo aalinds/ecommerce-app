@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './HomePage.scss';
 
-import SHOP_DATA from '../../shop/shop.js';
+import PRODUCT_DATA from '../../productList/product_lists.js';
 
 class HomePage extends Component {
 	render() {
 		return (
 			<div className='homepage'>
-				{SHOP_DATA.map((item) => (
+				{PRODUCT_DATA.map((item) => (
 					<div className='menu-item'>
 						<div
 							className='image'

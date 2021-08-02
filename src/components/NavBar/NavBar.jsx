@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 
-import './NavBar.styles.scss';
+import './NavBar.scss';
 
 const NavBar = () => (
 	<div className='header'>
@@ -11,11 +11,17 @@ const NavBar = () => (
 			<Logo className='logo' />
 		</Link>
 		<div className='options'>
-			<Link className='option' to='/shop'>
-				SHOP
+			<Link className='option' to='/home'>
+				HOME
 			</Link>
-			<Link className='option' to='/shop'>
-				CONTACT
+			<Link className='option' to='/myfav'>
+				MY FAV
+			</Link>
+			<Link className='option' to='/cart'>
+				CART
+			</Link>
+			<Link className='option' to='/profile'>
+				PROFILE
 			</Link>
 		</div>
 	</div>
