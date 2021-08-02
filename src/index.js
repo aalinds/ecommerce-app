@@ -5,9 +5,9 @@ import cartReducer from './reducers/cartReducer';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
-const store = createStore(cartReducer);
-
 import App from './App.jsx';
+
+const store = createStore(cartReducer);
 
 ReactDOM.render(
 	<Provider store={store}>
